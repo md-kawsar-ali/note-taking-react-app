@@ -1,0 +1,51 @@
+.note {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid #131223;
+}
+
+.note.visible {
+    border-color: #27262f;
+}
+
+.note h3 {
+    color: #bcbcbc;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    padding: 14px 25px;
+    margin: 0;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.note.visible h3 {
+    color: #dedede;
+}
+
+.note button {
+    border: none;
+    color: #c40000;
+    background: transparent;
+    margin-right: 14px;
+}
+
+.note button img {
+    height: 22px;
+}
+
+.note p {
+    color: #aeaeae;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    padding: 25px 25px;
+    border-top: 1px solid #27262f;
+    background: #131223;
+    display: none;
+    margin: 0;
+}
+
+.note .visible {
+    display: block;
+}

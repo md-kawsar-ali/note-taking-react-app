@@ -1,0 +1,24 @@
+.add-note {
+    background: #131223;
+    padding: 30px;
+}
+
+input,
+textarea,
+.form-control {
+    color: #bebebe;
+    background: #080716;
+    border: 1px solid #27262f;
+}
+
+.form-label {
+    color: #bebebe;
+}
+
+.form-control:focus {
+    color: #bebebe;
+    background-color: #080716;
+    border-color: #656565;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(19 18 35);
+}
