@@ -7,16 +7,28 @@ const AddNote = ({ notes, setNotes }) => {
         e.preventDefault();
         const title = e.target.title.value;
         const description = e.target.description.value;
-        const id = notes?.length + 1;
 
-        const newNote = {
-            _id: id,
-            title,
-            description
-        }
-
-        const newNotes = [...notes, newNote];
-        setNotes(newNotes);
+        fetch('http://localhost:5000/notes', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify({
+                title,
+                description
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                const id = data.insertedId;
+                const newNote = {
+                    _id: id,
+                    title,
+                    description
+                }
+                const newNotes = [...notes, newNote];
+                setNotes(newNotes);
+            })
 
         e.target.reset();
     }
