@@ -7,8 +7,8 @@ function App() {
   const { notes, setNotes } = useNotes();
 
   return (
-    <section className='container'>
-      <h1 className='text-center fw-bold my-5 text-uppercase'>Note Taking App</h1>
+    <section className='container py-4'>
+      <h1 className='text-center fw-bold my-5 text-uppercase' style={{ color: '#dedede' }}>Note Taking App</h1>
 
       <div className="row g-4 justify-content-center">
         <div className="col-lg-5">

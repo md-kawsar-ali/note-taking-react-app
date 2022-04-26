@@ -17,6 +17,17 @@ const Notes = ({ notes, setNotes }) => {
         }
     }
 
+    const handleEdit = (id, note) => {
+        const { title, description } = note;
+        const remaining = notes?.filter(note => note._id !== id);
+        const newNotes = [...remaining, {
+            _id: id,
+            title: title,
+            description: description
+        }];
+        setNotes(newNotes);
+    }
+
     if (!notes.length) {
         return <h2 className='text-center' style={{ color: '#dedede' }}>No Notes Found!</h2>;
     }
@@ -24,7 +35,7 @@ const Notes = ({ notes, setNotes }) => {
     return (
         <div>
             {
-                notes?.map(note => <Note key={note._id} note={note} handleDelete={handleDelete} />)
+                notes?.map(note => <Note key={note._id} note={note} handleDelete={handleDelete} handleEdit={handleEdit} />)
             }
         </div>
     );

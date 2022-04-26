@@ -49,3 +49,13 @@
 .note .visible {
     display: block;
 }
+
+.edit-note .modal-content {
+    background: #131223;
+}
+
+.edit-note .modal-header {
+    color: #dedede;
+    background: #131223;
+    border-bottom: 1px solid #27262f;
+}
